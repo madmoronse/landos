@@ -23,6 +23,10 @@ body {
     margin: 0 auto;
     padding: 0;
     font-family: Raleway;
+    font-weight: 300;
+}
+h1,h2,h3 {
+    font-weight: 500;
 }
 
 /* ПЕРВЫЙ ЭКРАН, ИНТРО */
@@ -50,14 +54,12 @@ body {
 .intro-text h2 {
     color: #FFC328;
     font-size: 36px;
-    font-weight: 300;
     text-transform: uppercase;
 }
 .intro-text .top-header {
     margin: 0;
     color: #fff;
     font-size: 36px;
-    font-weight: 300;
     text-transform: none;
 }
 .intro-text p {
@@ -113,14 +115,12 @@ section .text-content {
 section .text-content h2 {
     text-transform: uppercase;
     font-size: 32px;
-    font-weight: 500;
     color: rgba(51, 51, 51, 1);
     letter-spacing: 0;
 }
 .section-graph .text-content p,
 .section-graph .diagram p {
     font-size: 24px;
-    font-weight: 300;
     color: rgba(51, 51, 51, 1);
 }
 
@@ -153,7 +153,6 @@ section .text-content h2 {
 }
 .about-icon .about-item h2 {
     font-size: 18px;
-    font-weight: 300;
 }
 
 /* НАСТАВНИКИ */
@@ -191,7 +190,6 @@ section .text-content h2 {
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     color: #000;
-    font-weight: 300;
     font-size: 24px;
     padding:15px;
     text-align: left;
@@ -201,7 +199,6 @@ section .text-content h2 {
     background-color: #000;
     text-align: center;
     font-size: 14;
-    font-weight: 300;
     padding: 10px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -237,7 +234,6 @@ section .text-content h2 {
 .info-text {
     color: #fff;
     font-size: 24px;
-    font-weight: 300;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -258,11 +254,9 @@ section .text-content h2 {
 }
 .lesson-item-text h2 {
     font-size: 32px;
-    font-weight: 500;
 }
 .lesson-item-text {
     font-size: 16px;
-    font-weight: 300;
     color: #333333;
 }
 
@@ -310,7 +304,6 @@ section .text-content h2 {
 .form h2 {
     padding-top: 20px;
     font-size: 18px;
-    font-weight: 300;
     text-transform: uppercase;
 }
 
@@ -333,6 +326,5 @@ footer {
 }
 .footer .wrap h2 {
     font-size: 24px;
-    font-weight: 500;
     color: rgba(51, 51, 51, 1);
 }
