@@ -211,6 +211,7 @@ section .text-content h1 {
     max-width: 1920px;
     background-image: url(image/bg-info-section.png);
     margin-top: -75px;
+    padding-bottom: 75px;
 }
 .info-section {
     max-width: 1100px;
@@ -227,4 +228,99 @@ section .text-content h1 {
     font-weight: bold;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+/* КОНТЕЙНЕР ЧТО БУДЕТ НА ОНЛАЙН ОБУЧЕНИИ */
+.lessons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.lesson-item {
+    width: 100%;
+    max-width: 540px;
+}
+.lesson-item-text {
+    text-align: left;
+    padding-left: 30px;
+}
+.lesson-item-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+.lesson-item-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+/* КОНТЕЙНЕР ФОРМЫ */
+.full-container-form {
+    max-width: 1920px;
+    background-image: url(image/form-bg.jpg);
+}
+.section-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.form {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+.item {
+    width: 100%;
+    max-width: 540px;
+}
+.men img{
+    margin-bottom: -4px;
+}
+.form input, select {
+    width: 100%;
+    max-width: 410px;
+    border: 1px solid #7a7a7a;
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    color: #a5a5a5;
+    font-size: 12px;
+}
+.form button{
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+    max-width: 350px;
+    width: 100%;
+}
+.form h1 {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* ПОДВАЛ */
+footer {
+    background-color: #FFC328;
+}
+.footer .wrap{
+    display: flex;
+    width: 100%;
+    max-width: 665px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer .wrap img {
+    width: 82px;
+    height: 78px;
+}
+.footer .wrap h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(51, 51, 51, 1);
 }
