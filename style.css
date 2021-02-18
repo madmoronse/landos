@@ -57,6 +57,7 @@ h1,h2,h3 {
     font-size: 36px;
     text-transform: uppercase;
 }
+
 .intro-text .top-header {
     margin: 0;
     color: #fff;
@@ -173,7 +174,7 @@ section .text-content h2 {
     justify-content: space-between;
     width: 100%;
     max-width: 1100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 .teacher {
     display: flex;
@@ -280,7 +281,6 @@ section .text-content h2 {
 }
 .item {
     width: 100%;
-    max-width: 540px;
 }
 .men img{
     margin-bottom: -4px;
@@ -334,4 +334,72 @@ footer {
 }
 .phone {
     font-family: 'Open Sans', sans-serif;
+}
+
+/* Собственно сам слайдер */
+.slider{
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+
+
+
+
+
+
+
+/* Кружочки */
+
+.slider-dots {
+  text-align: center;
+    padding-bottom: 50px;
+ 
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+
+
+/* Анимация слайдов */
+
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    margin: 0 auto;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
