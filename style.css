@@ -129,6 +129,12 @@ section .text-content h1 {
     max-width: 250px;
     text-align: center;
 }
+.about-icon {
+    padding-bottom: 50px;
+}
+.icon img {
+    height: 150px;
+}
 .about-icon .about-item:last-child {
     margin-right: 0;
 }
