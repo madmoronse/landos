@@ -296,11 +296,14 @@ section .text-content h2 {
     font-size: 12px;
 }
 .form button{
-    border: none;
-    color: #fff;
     margin-top: 20px;
     max-width: 350px;
     width: 100%;
+}
+button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 .form h2 {
     padding-top: 20px;
