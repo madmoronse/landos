@@ -12,7 +12,6 @@
          url(fonts/Raleway/Raleway-Medium.ttf) format('ttf'),
          url(fonts/Raleway/Raleway-Bold.ttf);
 }
-
 *,
 *:before,
 *:after{
@@ -28,6 +27,44 @@ body {
 }
 h1,h2,h3 {
     font-weight: 500;
+}
+
+/* ОБЩИЕ ЭЛЕМЕНТЫ*/
+
+/* КНОПКА */
+.button {
+    max-width: 350px;
+    background-color: #27AE60;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+.button a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.yel-selector {
+    color: #000;
+    background-color: #FFC328;
+}
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+section {
+    text-align: center;
+    padding-top: 75px;
+}
+.full-container {
+    max-width: 1920px;
 }
 
 /* ПЕРВЫЙ ЭКРАН, ИНТРО */
@@ -51,14 +88,12 @@ h1,h2,h3 {
     max-width: 530px;
     margin-right: 15px;
 }
-/* ТЕКСТ В БЛОКЕ СЛЕВА */
 .intro-text h2 {
     color: #FFC328;
     font-size: 36px;
     text-transform: uppercase;
 }
-
-.intro-text .top-header {
+.intro-text h1{
     margin: 0;
     color: #fff;
     font-size: 36px;
@@ -70,11 +105,6 @@ h1,h2,h3 {
     color: #fff;
     letter-spacing: 1px;
 }
-.yel-selector {
-    color: #000;
-    background-color: #FFC328;
-}
-/* ЛОГОТИП */
 .intro-content .logo {
     text-align: center;
     margin-bottom: 70px;
@@ -83,33 +113,8 @@ h1,h2,h3 {
     width: 169px;
     height: 169px;
 }
-/* КНОПКА */
-.button {
-    max-width: 350px;
-    background-color: #27AE60;
-    padding: 15px;
-    text-align: center;
-    border-radius: 5px;
-}
-.button a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-/* КОНТЕЙНЕР */
-.container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
 
 /*  СЕКЦИЯ */
-section {
-    text-align: center;
-    padding-top: 75px;
-}
 section .text-content {
     line-height: 15px;
     max-width: 1100;
@@ -118,33 +123,31 @@ section .text-content h2 {
     text-transform: uppercase;
     font-size: 32px;
     color: rgba(51, 51, 51, 1);
-    letter-spacing: 0;
 }
-.section-graph .text-content p,
-.section-graph .diagram p {
+
+/* БЛОК С ДИАГРАММОЙ */
+.graph .text-content p,
+.graph .diagram p {
     font-size: 24px;
     color: rgba(51, 51, 51, 1);
 }
+.diagram img {
+    width: 100%;
+}
 
-/* СЕКЦИЯ О НАС */
+/* БЛОК С ИКОНКА О НАШИХ ПРЕИМУЩЕСТВАХ*/
 .about-icon {
-    display: inline-block;
-    padding-top: 75px;
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0px 50px 0px;
 }
 .about-icon .about-item {
-    float: left;
-    margin-right: 33px;
+    width: 100%;
     max-width: 250px;
     text-align: center;
 }
-.about-icon {
-    padding-bottom: 50px;
-}
 .icon img {
     height: 150px;
-}
-.about-icon .about-item:last-child {
-    margin-right: 0;
 }
 .about-icon .about-item .about-text {
     color: rgba(35, 31, 32, 1);
@@ -153,18 +156,14 @@ section .text-content h2 {
     font-size: 18px;
     text-transform: uppercase;
 }
-.about-icon .about-item h2 {
-    font-size: 18px;
-}
 
 /* НАСТАВНИКИ */
-.full-container {
-    max-width: 1920px;
+.mentors {
     background-image: url(image/bg.png);
     background-color: #FFC328;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 90%, 50% 100%, 50% 100%, 0 90%, 0 0);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 95%, 50% 100%, 50% 100%, 0 95%, 0 0);
 }
-.section-teacher {
+.teaching {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -182,11 +181,11 @@ section .text-content h2 {
     justify-content: flex-end;
     max-width: 250px;
     height: 400px;
-    margin-right: 30px;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     border-radius: 15px;
+    margin-right: 30px;
 }
 .teacher .teacher-name {
     background: rgba(255, 255, 255, 0.5);
@@ -217,20 +216,75 @@ section .text-content h2 {
 #teacher-4 {
     background-image: url(image/teacher/4.png);
 }
-/* ИНФОРМАЦИОННАЯ СЕКЦИЯ */
-.full-container-info {
-    max-width: 1920px;
+
+/* SLIDER ДЛЯ НАСТАВНИКОВ */
+.slider{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* КНОПКИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ */
+.slider-dots {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    margin: 0 auto;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* ИНФОРМАЦИОННЫЙ БЛОК */
+.info {
     background-image: url(image/bg-info-section.png);
     margin-top: -75px;
     padding-bottom: 75px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
-.info-section {
+.information {
     max-width: 1100px;
     padding-top: 150px;
     margin: 0 auto;
     text-align: center;
 }
-.info-section .button {
+.information .button {
     margin: 0 auto;
 }
 .info-text {
@@ -240,7 +294,7 @@ section .text-content h2 {
     padding-bottom: 30px;
 }
 
-/* КОНТЕЙНЕР ЧТО БУДЕТ НА ОНЛАЙН ОБУЧЕНИИ */
+/* БЛОК ИНФОРМАЦИИ О УРОКАХ */
 .lessons {
     display: flex;
     justify-content: space-between;
@@ -261,15 +315,18 @@ section .text-content h2 {
     font-size: 16px;
     color: #333333;
 }
+.lesson-item-text ul{
+    padding-left: 15px;
+}
 
-/* КОНТЕЙНЕР ФОРМЫ */
-.full-container-form {
-    max-width: 1920px;
+/* КОНТЕЙНЕР С ФОРМОЙ */
+.forms {
     background-image: url(image/form-bg.jpg);
 }
 .section-form {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -300,11 +357,6 @@ section .text-content h2 {
     max-width: 350px;
     width: 100%;
 }
-button {
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
 .form h2 {
     padding-top: 20px;
     font-size: 18px;
@@ -317,9 +369,9 @@ footer {
 }
 .footer .wrap{
     display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 665px;
-    justify-content: space-between;
     margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -334,65 +386,4 @@ footer {
 }
 .phone {
     font-family: 'Open Sans', sans-serif;
-}
-
-/* слайдер */
-.slider{
-
-    display: flex;
-    justify-content: space-between;
-
-    margin: 0 auto;
-}
-
-/* Кружочки */
-
-.slider-dots {
-  text-align: center;
-    padding-bottom: 50px;
- 
-}
-.slider-dots_item{
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: #ddd;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.slider-dots_item:hover {
-    background-color: #aaa;
-}
-
-
-/* Анимация слайдов */
-
-.slider .item {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-    margin: 0 auto;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
 }
