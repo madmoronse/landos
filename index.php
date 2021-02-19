@@ -21,8 +21,8 @@
                             автомате <span class="yel-selector">без складов и сотрудников</span>
                         </p>
                         <h2> Вступай в школу дропшиппинга от bizoutmax</h2>
-                        <a href="#">
-                            <button class="button">Записать на бесплатное обучение</button>
+                        <a href="#form">
+                            <button class="button">Записаться на бесплатное обучение</button>
                         </a>
                     </div>
             </div>
@@ -100,8 +100,7 @@
             <h2>Наши наставники</h2>
         </div>
 
-
-    <div class="teachers ">
+    <div class="teachers">
         <div class="cont s--inactive">
         <div class="slider">
             <div class="item">
@@ -137,8 +136,8 @@
                                                     <a href="#">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
-                                                    <a href="#">
-                                                        <button class="button">Записать на бесплатное обучение</button>
+                                                    <a href="#form">
+                                                        <button class="button">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -180,8 +179,8 @@
                                                     <a href="#">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
-                                                    <a href="#">
-                                                        <button class="button">Записать на бесплатное обучение</button>
+                                                    <a href="#form">
+                                                        <button class="button">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -223,8 +222,8 @@
                                                     <a href="#">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
-                                                    <a href="#">
-                                                        <button class="button">Записать на бесплатное обучение</button>
+                                                    <a href="#form">
+                                                        <button class="button">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -270,8 +269,8 @@
                                                     <a href="#">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
-                                                    <a href="#">
-                                                        <button class="button">Записать на бесплатное обучение</button>
+                                                    <a href="#form">
+                                                        <button class="button">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -313,8 +312,8 @@
                                                     <a href="#">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
-                                                    <a href="#">
-                                                        <button class="button">Записать на бесплатное обучение</button>
+                                                    <a href="#form">
+                                                        <button class="button">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -356,8 +355,8 @@
                                                     <a href="#">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
-                                                    <a href="#">
-                                                        <button class="button">Записать на бесплатное обучение</button>
+                                                    <a href="#form">
+                                                        <button class="button">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -388,7 +387,7 @@
             <p>Школа <span class="yel-selector">«DROPSHIPPING. OUTMAX»</span> даст вам полное понимание функционала и возможностей продаж товара по всей России и СНГ.  Вы научитесь с нуля создавать привлекательные рекламные объявления, настраивать рекламу и приводить поток клиентов на ваши торговые площадки.</p>
         </div>
         <div class="button">
-            <a href="#">Записать на бесплатное обучение</a>
+            <a href="#form">Записаться на бесплатное обучение</a>
         </div>
     </section>
 </div>
@@ -416,7 +415,7 @@
     </section>
 </div>
 
-<div class="full-container forms">
+<div class="full-container forms" id="form">
     <section class="section-form">
         <div class="form items">
             <h2>Запись на бесплатное обучение</h2>
