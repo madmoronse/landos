@@ -9,7 +9,7 @@ function plusSlide() {
 
 /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
 function minusSlide() {
-    showSlides(slideIndex -= 1);  
+    showSlides(slideIndex -= 1);
 }
 
 /* Устанавливает текущий слайд */
@@ -38,28 +38,27 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
+var $cont = document.querySelector('.cont');
+var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
 
-var modal = document.getElementById('myModal');
+setTimeout(function() {
+  $cont.classList.remove('s--inactive');
+}, 200);
 
+$elsArr.forEach(function($el) {
+  $el.addEventListener('click', function() {
+    if (this.classList.contains('s--active')) return;
+    $cont.classList.add('s--el-active');
+    this.classList.add('s--active');
+  });
+});
 
-var btn = document.getElementById("teacher-1");
+$closeBtnsArr.forEach(function($btn) {
+  $btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    $cont.classList.remove('s--el-active');
+    document.querySelector('.el.s--active').classList.remove('s--active');
+  });
+});
 
-
-var span = document.getElementsByClassName("close")[0];
-
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
