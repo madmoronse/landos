@@ -179,7 +179,7 @@ section .text-content h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    max-width: 250px;
+    width: 100%;
     height: 400px;
     background-repeat: no-repeat;
     background-position: top;
@@ -219,9 +219,7 @@ section .text-content h2 {
 
 /* SLIDER ДЛЯ НАСТАВНИКОВ */
 .slider{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    width: 100%;
 }
 
 /* КНОПКИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ */
