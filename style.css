@@ -203,18 +203,6 @@ section .text-content h2 {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-#teacher-1 {
-    background-image: url(image/teacher/1.png);
-}
-#teacher-2 {
-    background-image: url(image/teacher/2.png);
-}
-#teacher-3 {
-    background-image: url(image/teacher/3.png);
-}
-#teacher-4 {
-    background-image: url(image/teacher/4.png);
-}
 
 /* SLIDER ДЛЯ НАСТАВНИКОВ */
 .slider{
@@ -420,7 +408,6 @@ footer {
     justify-content: space-between;
 }
 .left-photo{
-  background-image: url(image/teacher/1.png);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;

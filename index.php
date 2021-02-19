@@ -1,3 +1,9 @@
+<?php
+    require_once('teacher.php');
+    $data = getMentors();
+
+    list($item1, $item2) = array_chunk($data, ceil(count($data)/2));
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,35 +111,33 @@
         <div class="slider">
             <div class="item">
                     <div class="cont__inner">
+                        <?php foreach ($item1 as $value) {?>
                         <div class="el">
                             <div class="el__overflow">
                                 <div class="el__inner">
                                     <div class="el__preview-cont">
-                                        <div class="teacher" id="teacher-1">
-                                            <div class="teacher-name">Дарья Сергеевна</div>
-                                            <div class="years">С нами: 4 года</div>
+                                        <div class="teacher" style="background-image: url(image/teacher/<?php echo $value['image']; ?>.png);">
+                                            <div class="teacher-name"><?php echo $value['name']; ?></div>
+                                            <div class="years">С нами: <?php echo $value['time']; ?></div>
                                         </div>
                                     </div>
 
                                     <div class="el__content">
                                         <div class="modal-content">
                                             <span class="close" style="display: none;">&times;</span>
-                                            <div class="left-photo"></div>
+                                            <div class="left-photo" style="background-image: url(image/teacher/<?php echo $value['image']; ?>.png);"></div>
 
                                             <div class="content-teacher">
                                                 <div class="content-teacher-head">
-                                                  <h2>Дарья Сергеевна</h2>
-                                                  <p>Возраст: 36 годиков<br>
-                                                  С нами: 4 года</p>
+                                                  <h2><?php echo $value['name']; ?></h2>
+                                                  <p>Возраст: <?php echo $value['age']; ?><br>
+                                                  С нами: <?php echo $value['time']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-text">
-                                                      <p>Привет. Тут я расскажу о себе и о том как я стал самым успешным дроппером.
-                                                      Желательно написать в крации, так как никто читать портянку текста не будет.
-                                                      Спасибо за понимание. Ниже, кстати, кнопка для просмотра видео или
-                                                      прослушки аудио подкаста.</p>
+                                                      <p><?php echo $value['description']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-btn">
-                                                    <a href="#">
+                                                    <a href="<?php echo $value['link']; ?>">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
@@ -147,126 +151,40 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="el">
-                            <div class="el__overflow">
-                                <div class="el__inner">
-                                    <div class="el__preview-cont">
-                                        <div class="teacher" id="teacher-1">
-                                            <div class="teacher-name">Дарья Сергеевна</div>
-                                            <div class="years">С нами: 4 года</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="el__content">
-                                        <div class="modal-content">
-                                            <span class="close" style="display: none;">&times;</span>
-                                            <div class="left-photo"></div>
-
-                                            <div class="content-teacher">
-                                                <div class="content-teacher-head">
-                                                  <h2>Сергей Борисович</h2>
-                                                  <p>Возраст: 36 годиков<br>
-                                                  С нами: 4 года</p>
-                                                </div>
-                                                <div class="content-teacher-text">
-                                                      <p>Привет. Тут я расскажу о себе и о том как я стал самым успешным дроппером.
-                                                      Желательно написать в крации, так как никто читать портянку текста не будет.
-                                                      Спасибо за понимание. Ниже, кстати, кнопка для просмотра видео или
-                                                      прослушки аудио подкаста.</p>
-                                                </div>
-                                                <div class="content-teacher-btn">
-                                                    <a href="#">
-                                                        <button class="button present">Смотреть презентацию</button>
-                                                    </a>
-                                                    <a href="#form">
-                                                        <button class="button">Записаться на бесплатное обучение</button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      <div class="el__close-btn"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="el">
-                            <div class="el__overflow">
-                                <div class="el__inner">
-                                    <div class="el__preview-cont">
-                                        <div class="teacher" id="teacher-1">
-                                            <div class="teacher-name">Дарья Сергеевна</div>
-                                            <div class="years">С нами: 4 года</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="el__content">
-                                        <div class="modal-content">
-                                            <span class="close" style="display: none;">&times;</span>
-                                            <div class="left-photo"></div>
-
-                                            <div class="content-teacher">
-                                                <div class="content-teacher-head">
-                                                  <h2>Дарья Евгеньевна</h2>
-                                                  <p>Возраст: 36 годиков<br>
-                                                  С нами: 4 года</p>
-                                                </div>
-                                                <div class="content-teacher-text">
-                                                      <p>Привет. Тут я расскажу о себе и о том как я стал самым успешным дроппером.
-                                                      Желательно написать в крации, так как никто читать портянку текста не будет.
-                                                      Спасибо за понимание. Ниже, кстати, кнопка для просмотра видео или
-                                                      прослушки аудио подкаста.</p>
-                                                </div>
-                                                <div class="content-teacher-btn">
-                                                    <a href="#">
-                                                        <button class="button present">Смотреть презентацию</button>
-                                                    </a>
-                                                    <a href="#form">
-                                                        <button class="button">Записаться на бесплатное обучение</button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      <div class="el__close-btn"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <?php } ?>
                     </div>
             </div>
 
             <div class="item">
                     <div class="cont__inner">
+
+                        <?php foreach ($item2 as $value) {?>
                         <div class="el">
                             <div class="el__overflow">
                                 <div class="el__inner">
                                     <div class="el__preview-cont">
-                                        <div class="teacher" id="teacher-1">
-                                            <div class="teacher-name">Дарья Сергеевна</div>
-                                            <div class="years">С нами: 4 года</div>
+                                        <div class="teacher" style="background-image: url(image/teacher/<?php echo $value['image']; ?>.png);">
+                                            <div class="teacher-name"><?php echo $value['name']; ?></div>
+                                            <div class="years">С нами: <?php echo $value['time']; ?></div>
                                         </div>
                                     </div>
 
                                     <div class="el__content">
                                         <div class="modal-content">
                                             <span class="close" style="display: none;">&times;</span>
-                                            <div class="left-photo"></div>
+                                            <div class="left-photo" style="background-image: url(image/teacher/<?php echo $value['image']; ?>.png);"></div>
 
                                             <div class="content-teacher">
                                                 <div class="content-teacher-head">
-                                                  <h2>Дарья </h2>
-                                                  <p>Возраст: 36 годиков<br>
-                                                  С нами: 4 года</p>
+                                                  <h2><?php echo $value['name']; ?></h2>
+                                                  <p>Возраст: <?php echo $value['age']; ?><br>
+                                                  С нами: <?php echo $value['time']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-text">
-                                                      <p>Привет. Тут я расскажу о себе и о том как я стал самым успешным дроппером.
-                                                      Желательно написать в крации, так как никто читать портянку текста не будет.
-                                                      Спасибо за понимание. Ниже, кстати, кнопка для просмотра видео или
-                                                      прослушки аудио подкаста.</p>
+                                                      <p><?php echo $value['description']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-btn">
-                                                    <a href="#">
+                                                    <a href="<?php echo $value['link']; ?>">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
@@ -280,92 +198,8 @@
                                 </div>
                             </div>
                         </div>
+                    <?php } ?>
 
-                        <div class="el">
-                            <div class="el__overflow">
-                                <div class="el__inner">
-                                    <div class="el__preview-cont">
-                                        <div class="teacher" id="teacher-1">
-                                            <div class="teacher-name">Дарья Сергеевна</div>
-                                            <div class="years">С нами: 4 года</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="el__content">
-                                        <div class="modal-content">
-                                            <span class="close" style="display: none;">&times;</span>
-                                            <div class="left-photo"></div>
-
-                                            <div class="content-teacher">
-                                                <div class="content-teacher-head">
-                                                  <h2>Дарья Ольговна</h2>
-                                                  <p>Возраст: 36 годиков<br>
-                                                  С нами: 4 года</p>
-                                                </div>
-                                                <div class="content-teacher-text">
-                                                      <p>Привет. Тут я расскажу о себе и о том как я стал самым успешным дроппером.
-                                                      Желательно написать в крации, так как никто читать портянку текста не будет.
-                                                      Спасибо за понимание. Ниже, кстати, кнопка для просмотра видео или
-                                                      прослушки аудио подкаста.</p>
-                                                </div>
-                                                <div class="content-teacher-btn">
-                                                    <a href="#">
-                                                        <button class="button present">Смотреть презентацию</button>
-                                                    </a>
-                                                    <a href="#form">
-                                                        <button class="button">Записаться на бесплатное обучение</button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      <div class="el__close-btn"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="el">
-                            <div class="el__overflow">
-                                <div class="el__inner">
-                                    <div class="el__preview-cont">
-                                        <div class="teacher" id="teacher-1">
-                                            <div class="teacher-name">Дарья Сергеевна</div>
-                                            <div class="years">С нами: 4 года</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="el__content">
-                                        <div class="modal-content">
-                                            <span class="close" style="display: none;">&times;</span>
-                                            <div class="left-photo"></div>
-
-                                            <div class="content-teacher">
-                                                <div class="content-teacher-head">
-                                                  <h2>Дарья Алексеевна</h2>
-                                                  <p>Возраст: 36 годиков<br>
-                                                  С нами: 4 года</p>
-                                                </div>
-                                                <div class="content-teacher-text">
-                                                      <p>Привет. Тут я расскажу о себе и о том как я стал самым успешным дроппером.
-                                                      Желательно написать в крации, так как никто читать портянку текста не будет.
-                                                      Спасибо за понимание. Ниже, кстати, кнопка для просмотра видео или
-                                                      прослушки аудио подкаста.</p>
-                                                </div>
-                                                <div class="content-teacher-btn">
-                                                    <a href="#">
-                                                        <button class="button present">Смотреть презентацию</button>
-                                                    </a>
-                                                    <a href="#form">
-                                                        <button class="button">Записаться на бесплатное обучение</button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      <div class="el__close-btn"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

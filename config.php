@@ -1,8 +1,8 @@
 <?php
-defined('VG_ACCESS') or die('Access denied');
-
 const HOST    = 'localhost';
 const USER    = 'root';
 const PASS    = '';
-const DB_NAME = 'drop_school';
+const DB = 'drop_school';
 
+$db = @mysqli_connect(HOST,USER,PASS,DB) or die ('Cant connect DB');
+mysqli_set_charset($db, 'utf8') or die('Cant connect DB');
