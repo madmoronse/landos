@@ -62,3 +62,11 @@ $closeBtnsArr.forEach(function($btn) {
   });
 });
 
+let select = document.querySelector('.select-filter');
+document.querySelectorAll('.button-value').forEach(b => {
+    b.addEventListener('click', e => {
+         select.value = e.target.value;
+         select.dispatchEvent(new Event('change')); // Вызываем событие change
+    });
+})
+

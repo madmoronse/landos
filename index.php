@@ -3,6 +3,8 @@
     $data = getMentors();
 
     list($item1, $item2) = array_chunk($data, ceil(count($data)/2));
+
+    $option = array_merge($item1, $item2);
 ?>
 <!DOCTYPE html>
 <html>
@@ -141,7 +143,7 @@
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
-                                                        <button class="button">Записаться на бесплатное обучение</button>
+                                                        <button value="<?php echo $value['name']; ?>" class="button button-value">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -188,7 +190,7 @@
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
-                                                        <button class="button">Записаться на бесплатное обучение</button>
+                                                        <button value="<?php echo $value['name']; ?>" class="button button-value">Записаться на бесплатное обучение</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -257,11 +259,11 @@
                 <input type="text" value="Ваше имя"><br>
                 <input type="text" value="Ваш телефон"><br>
                 <input type="text" value="Ваш Email"><br>
-                <select name="" id="">
-                    <option value="">Выберите наставника</option>
-                    <option value="">1</option>
-                    <option value="">1</option>
-                    <option value="">1</option>
+                <select name="mentors" id="mentors" class="select-filter">
+                        <option value="">Выберите наставника</option>
+                    <?php foreach ($option as $value) {?>
+                        <option value="<?php echo $value['name'];?>"><?php echo $value['name'];?></option>
+                    <?php } ?>
                 </select>
                 <button type="submit" class="button">Отправить заявку</button>
             </form>
