@@ -29,6 +29,10 @@ h1,h2,h3 {
     font-weight: 500;
 }
 
+._error {
+  box-shadow: 0 0 15px red;
+}
+
 /* ОБЩИЕ ЭЛЕМЕНТЫ*/
 
 /* КНОПКА */
@@ -309,6 +313,25 @@ section .text-content h2 {
 /* КОНТЕЙНЕР С ФОРМОЙ */
 .forms {
     background-image: url(image/form-bg.jpg);
+}
+#form {
+  position: relative;
+}
+.form_body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51,51,51,0.9) url('image/load-1.gif') center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+.form_body.sending::after {
+    opacity: 1;
+    visibility: visible;
 }
 .section-form {
     display: flex;

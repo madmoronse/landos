@@ -253,13 +253,13 @@
 
 <div class="full-container forms" id="form">
     <section class="section-form">
-        <div class="form items">
+        <div class="form items" id="form">
             <h2>Запись на бесплатное обучение</h2>
-            <form action="#">
-                <input type="text" value="Ваше имя"><br>
-                <input type="text" value="Ваш телефон"><br>
-                <input type="text" value="Ваш Email"><br>
-                <select name="mentors" id="mentors" class="select-filter">
+            <form action="#" method="POST" class="form_body">
+                <input type="text" name="name" value="" class="name req" placeholder="Введите имя"><br>
+                <input type="text" name="phone" value="" class="phone req" placeholder="Введите телефон"><br>
+                <input type="text" name="email" value="" class="email req" placeholder="Введите email"><br>
+                <select name="mentors" id="mentors" class="select-filter req">
                         <option value="">Выберите наставника</option>
                     <?php foreach ($option as $value) {?>
                         <option value="<?php echo $value['name'];?>"><?php echo $value['name'];?></option>
