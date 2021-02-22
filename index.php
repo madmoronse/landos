@@ -251,11 +251,11 @@
     </section>
 </div>
 
-<div class="full-container forms" id="form">
+<div class="full-container forms">
     <section class="section-form">
-        <div class="form items" id="form">
+        <div class="form items" id="form_body">
             <h2>Запись на бесплатное обучение</h2>
-            <form action="#" method="POST" class="form_body">
+            <form action="#" method="POST" class="form_body" id="form"> 
                 <input type="text" name="name" value="" class="name req" placeholder="Введите имя"><br>
                 <input type="text" name="phone" value="" class="phone req" placeholder="Введите телефон"><br>
                 <input type="text" name="email" value="" class="email req" placeholder="Введите email"><br>

@@ -75,6 +75,7 @@ document.querySelectorAll('.button-value').forEach(b => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('form');
+    const form_body = document.getElementById('form_body');
     form.addEventListener('submit', formSend);
 
     async function formSend(e) {
@@ -82,24 +83,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let error = formValidate(form);
 
-       // let formData = new FormData(form);
+        let formData = new FormData(form);
 
-        console.log(error);
         if (error === 0) {
-            form.classList.add('sending');
-
-            /*
+            form_body.classList.add('sending');
+            
             let response = await fetch('mail.php', {
                 method: 'POST',
                 body: formData
             });
-            if (response.ok) {
+            if (response.ok) { 
                 let result = await response.json();
                 alert(result.message);
                 form.reset();
+                form_body.classList.remove('sending');
             }else {
                 alert('Ошибка!');
-            }*/
+                form_body.classList.remove('sending');
+            }
 
         } else {
             alert("Заполните обязательные поля!");
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    async function formValidate(form) {
+        function formValidate(form) {
         let error = 0;
         let formReq = document.querySelectorAll('.req');
 
@@ -128,7 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
         }
-        console.log(error);
         return error;
     }
 

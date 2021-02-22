@@ -18,6 +18,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    outline: none;
 }
 body {
     margin: 0 auto;
@@ -314,10 +315,10 @@ section .text-content h2 {
 .forms {
     background-image: url(image/form-bg.jpg);
 }
-#form {
+#form_body {
   position: relative;
 }
-.form_body::after {
+#form_body::after {
   content: "";
   position: absolute;
   top: 0;
@@ -329,7 +330,7 @@ section .text-content h2 {
   visibility: hidden;
   transition: all 0.5s ease 0s;
 }
-.form_body.sending::after {
+#form_body.sending::after {
     opacity: 1;
     visibility: visible;
 }
