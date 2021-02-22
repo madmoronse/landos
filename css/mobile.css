@@ -1,0 +1,130 @@
+@media screen and (max-width: 1220px) {
+    .left-content {
+        max-width: 650px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .left-content {
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .intro-content .logo img {
+        width: 122px;
+        height: 122px;
+    }
+    .intro-content .logo {
+        text-align: left;
+        margin-bottom: 70px;
+        padding: 0px 20px 70px;
+    }
+    .intro-text h1 {
+        font-size: 22px;
+    }
+    .intro-text p {
+        font-size: 20px;
+    }
+    .intro-text h2 {
+        font-size: 22px;
+    }
+    .intro-text .button {
+        width: 100%;
+        text-transform: uppercase;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    .intro {
+        background-position: -720px;
+    }
+    section .text-content h2 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1em;
+    }
+    .graph .text-content p, .graph .diagram p {
+        font-size: 14px;
+    }
+    .about-icon .about-item {
+        width: 50%;
+        max-width: 200px;
+        text-align: center;
+    }
+    .about-icon {
+        flex-wrap: wrap;
+        padding: 30px 0px 50px 0px;
+    }
+    .left-photo {
+        display: none;
+    }
+    .info {
+        margin-top: -115px;
+    }
+    .content-teacher-btn .button {
+        font-size: 10px;
+    }
+    .content-teacher-text {
+        font-size: 14px;
+    }
+    .modal-content {
+        height: 500px;
+    }
+    .slider-dots {
+        padding-top: 20px;
+    }
+    .teacher {
+        height: 500px;
+    }
+    .el {
+        height: 500px;
+    }
+    .el__preview-cont {
+        height: auto;
+    }
+    .info-icon {
+        display: none;
+    }
+    .info-text {
+        font-size: 14px;
+    }
+    .lesson-item {
+        width: 0%;
+        text-align: center;
+
+    }
+    .lesson-item img {
+        width: 300px;
+        height: 250px;
+        opacity: 0.2;
+        margin-left: 35px;
+    }
+    .lesson-item-text {
+        font-size: 16px;
+        color: #000;
+        font-weight: 600;
+    }
+    .men {
+        display: none;
+    }
+    .items {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+    .footer .wrap {
+        display: flow-root;
+        align-items: center;
+        width: 100%;
+        max-width: 665px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .footer .wrap h2 {
+        margin: 0;
+    }
+    .el__overflow {
+        height: 500px;
+    }
+}
