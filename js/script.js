@@ -31,6 +31,7 @@ function showSlides(n) {
     }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
@@ -42,6 +43,7 @@ function showSlides(n) {
 var $cont = document.querySelector('.cont');
 var $elsArr = [].slice.call(document.querySelectorAll('.el'));
 var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+var $teaching = [].slice.call(document.querySelectorAll('.teaching'));
 
 setTimeout(function() {
   $cont.classList.remove('s--inactive');

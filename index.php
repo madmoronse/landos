@@ -9,10 +9,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="icon" href="image/logo.png" type="image/x-icon">
     <title>Школа дропшиппинга от OUTMAX</title>
@@ -62,7 +62,7 @@
         <div class="about-icon">
             <div class="about-item">
                 <div class="icon">
-                    <img src="image/icon/1.png" alt="">
+                    <img src="image/icons/1.svg" alt="">
                 </div>
                 <div class="about-text">
                     <h2>Удобный формат обучения</h2>
@@ -72,7 +72,7 @@
 
             <div class="about-item">
                 <div class="icon">
-                    <img src="image/icon/2.png" alt="">
+                    <img src="image/icons/2.svg" alt="">
                 </div>
                 <div class="about-text">
                     <h2>Обучение с упором на практику</h2>
@@ -82,7 +82,7 @@
 
             <div class="about-item">
                 <div class="icon">
-                    <img src="image/icon/3.png" alt="">
+                    <img src="image/icons/3.svg" alt="">
                 </div>
                 <div class="about-text">
                     <h2>Ваш личный <br> куратор</h2>
@@ -92,7 +92,7 @@
 
             <div class="about-item">
                 <div class="icon">
-                    <img src="image/icon/4.png" alt="">
+                    <img src="image/icons/4.svg" alt="">
                 </div>
                 <div class="about-text">
                     <h2>Обучение на вашем проекте</h2>
