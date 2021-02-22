@@ -283,7 +283,15 @@
         </div>
     </div>
 </footer>
-
+    <div id="popup" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="popup_text">
+                    Заявка отправлена!
+                </div>
+            </div>
+        </div>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
