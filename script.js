@@ -1,5 +1,4 @@
 "use strict"
-
 /* Индекс слайда по умолчанию */
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -141,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     error++;
                 }
             }
-
         }
         return error;
     }

@@ -13,6 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Школа BIZOUTMAX</title>
 </head>
 <body>
@@ -132,14 +133,13 @@
                                             <div class="content-teacher">
                                                 <div class="content-teacher-head">
                                                   <h2><?php echo $value['name']; ?></h2>
-                                                  <p>Возраст: <?php echo $value['age']; ?><br>
                                                   С нами: <?php echo $value['time']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-text">
                                                       <p><?php echo $value['description']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-btn">
-                                                    <a href="<?php echo $value['link']; ?>">
+                                                    <a href="<?php echo $value['link']; ?>" target="_blank">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
@@ -179,14 +179,13 @@
                                             <div class="content-teacher">
                                                 <div class="content-teacher-head">
                                                   <h2><?php echo $value['name']; ?></h2>
-                                                  <p>Возраст: <?php echo $value['age']; ?><br>
                                                   С нами: <?php echo $value['time']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-text">
                                                       <p><?php echo $value['description']; ?></p>
                                                 </div>
                                                 <div class="content-teacher-btn">
-                                                    <a href="<?php echo $value['link']; ?>">
+                                                    <a href="<?php echo $value['link']; ?>" target="_blank">
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
@@ -257,7 +256,7 @@
             <h2>Запись на бесплатное обучение</h2>
             <form action="#" method="POST" class="form_body" id="form"> 
                 <input type="text" name="name" value="" class="name req" placeholder="Введите имя"><br>
-                <input type="text" name="phone" value="" class="phone req" placeholder="Введите телефон"><br>
+                <input type="tel" id="phone" name="phone" value="" class="phone req" placeholder="Введите телефон"><br>
                 <input type="text" name="email" value="" class="email req" placeholder="Введите email"><br>
                 <select name="mentors" id="mentors" class="select-filter req">
                         <option value="">Выберите наставника</option>
