@@ -74,7 +74,7 @@ document.querySelectorAll('.button-value').forEach(b => {
 
 document.addEventListener('DOMContentLoaded', function() {
     $(document).ready(function() {
-        $("#phone").mask("+7 (999) 99-99-999");
+        $("#phone").mask("+7-(999)-999-99-99");
       });
     const form = document.getElementById('form');
     const form_body = document.getElementById('form_body');

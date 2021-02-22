@@ -287,7 +287,7 @@
         <div class="popup_body">
             <div class="popup_content">
                 <div class="popup_text">
-                    Заявка отправлена!
+                    Заявка отправлена
                 </div>
             </div>
         </div>

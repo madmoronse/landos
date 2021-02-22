@@ -81,11 +81,11 @@ section {
   left: 0;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.6s ease;
 }
 .popup.open {
   opacity: 1;
   visibility: visible;
-  transition:cubic-bezier(1, 0, 0, 1);
 }
 .popup.open .popup_content {
   transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
@@ -101,10 +101,11 @@ section {
 }
 .popup_content{
   position: relative;
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffffc7;
+  color: #000000;
   max-width: 600px;
-  padding: 30px;
+  padding: 65px;
+  border-radius: 5px;
 }
 .popup_close{
   position: absolute;
@@ -225,7 +226,6 @@ section .text-content h2 {
     justify-content: space-between;
     width: 100%;
     max-width: 1100px;
-    padding-bottom: 50px;
 }
 .teacher {
     display: flex;
@@ -270,17 +270,17 @@ section .text-content h2 {
 }
 .slider-dots_item{
     cursor: pointer;
-    height: 12px;
-    width: 12px;
+    height: 20px;
+    width: 20px;
     margin: 0 2px;
-    background-color: #ddd;
+    background-color: #0303036b;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 .active,
 .slider-dots_item:hover {
-    background-color: #aaa;
+    background-color: #fff;
 }
 
 /* Анимация слайдов */
@@ -412,7 +412,7 @@ section .text-content h2 {
     border-radius: 5px;
 }
 .form input:focus, select:focus {
-  box-shadow: 0 0 10px rgb(49, 49, 49);
+  box-shadow: 0 0 7px rgb(49, 49, 49);
 }
 .form button{
     margin-top: 20px;
