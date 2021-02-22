@@ -31,7 +31,7 @@ h1,h2,h3 {
 }
 
 ._error {
-  box-shadow: 0 0 15px red;
+  box-shadow: 0 0 10px red;
 }
 
 /* ОБЩИЕ ЭЛЕМЕНТЫ*/
@@ -407,8 +407,12 @@ section .text-content h2 {
     height: 50px;
     margin-top: 20px;
     padding: 10px;
-    color: #a5a5a5;
+    color: #000;
     font-size: 12px;
+    border-radius: 5px;
+}
+.form input:focus, select:focus {
+  box-shadow: 0 0 10px rgb(49, 49, 49);
 }
 .form button{
     margin-top: 20px;
