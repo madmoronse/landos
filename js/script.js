@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (error === 0) {
             form_body.classList.add('sending');
             
-            let response = await fetch('mail.php', {
+            let response = await fetch('../function/mail.php', {
                 method: 'POST',
                 body: formData
             });
