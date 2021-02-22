@@ -13,7 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Школа BIZOUTMAX</title>
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="icon" href="image/logo.png" type="image/x-icon">
+    <title>Школа дропшиппинга от OUTMAX</title>
 </head>
 <body>
 
@@ -290,6 +292,8 @@
             </div>
         </div>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
