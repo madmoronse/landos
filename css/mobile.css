@@ -13,10 +13,16 @@
         width: 122px;
         height: 122px;
     }
+    .intro-content {
+        margin: 0;
+    }
     .intro-content .logo {
         text-align: left;
         margin-bottom: 70px;
         padding: 0px 20px 70px;
+    }
+    .intro-text {
+        padding: 0 25px;
     }
     .intro-text h1 {
         font-size: 22px;
@@ -30,8 +36,11 @@
     .intro-text .button {
         width: 100%;
         text-transform: uppercase;
-        margin-left: 10px;
         margin-top: 50px;
+    }
+    .intro-text a {
+        width: 100%;
+        text-align: center;
     }
     .intro {
         background-position: -720px;
@@ -65,6 +74,9 @@
     .content-teacher-text {
         font-size: 14px;
     }
+    .content-teacher {
+        border-radius: 15px;
+    }
     .modal-content {
         height: 500px;
     }
@@ -76,6 +88,22 @@
     }
     .el {
         height: 500px;
+        width: 100%;
+        position: inherit;
+        margin-bottom: 80px;
+    }
+    .mentors {
+        clip-path: none;
+    }
+    .mentor-item {
+        display: block;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0;
+        padding: 20px;
+    }
+    .mentor-item li {
+        list-style: none;
     }
     .el__preview-cont {
         height: auto;
@@ -126,5 +154,43 @@
     }
     .el__overflow {
         height: 500px;
+    }
+    .cont {
+        display: none;
+    }
+    .slider-dots {
+        display: none;
+    }
+    .tee {
+        display: block;
+    }
+
+    .el.s--active .el__close-btn:before {
+        transition: all 0.3s 0.1s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+        transform: rotate(45deg) translateX(0);
+    }
+    .el__close-btn:after {
+        transform: rotate(-45deg) translateX(100%);
+    }
+    .el.s--active .el__close-btn:after {
+        transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+        transform: rotate(-45deg) translateX(0);
+    }
+    .el.s--active .el__content {
+        z-index: 2;
+        opacity: 1;
+        pointer-events: auto;
+        transition: all 0.3s 0.3s;
+      }
+      .button-block {
+          text-align: center;
+      }
+      .br {
+          display: none;
+      }
+}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 }

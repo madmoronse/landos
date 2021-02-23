@@ -9,11 +9,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/style.css">
+    <meta property = "og:title" content = "Школа дропшиппинга от Outmax" />
+    <meta property = "og:description" content = "Бесплатная школа дропшиппинга от компании Outmax. С опытными наставниками, которые не первый год в продажах" />
+    <meta property = "og:type" content = "http://outmax-school.ru/" />
+    <meta property = "og:url" content = "http://outmax-school.ru/" />
+    <meta property = "og:image" content = "http://outmax-school.ru/image/og-img.png" />
+    <link rel="stylesheet" href="css/style.css?<?php echo time();?>">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/mobile.css?<?php echo time();?>">
     <link rel="icon" href="image/favicon.png" type="image/x-icon">
     <title>Школа дропшиппинга от OUTMAX</title>
 </head>
@@ -27,13 +32,15 @@
                     <div class="intro-text">
                         <h1>Как запустить продажи кроссовок</h1>
                         <p>
-                            <span class="yel-selector">удаленно</span> и получать прибыль на <br>
+                            <span class="yel-selector">удаленно</span> и получать прибыль на <span class="br"><br></span>
                             автомате <span class="yel-selector">без складов и сотрудников</span>
                         </p>
                         <h2> Вступай в школу дропшиппинга от bizoutmax</h2>
-                        <a href="#form">
-                            <button class="button">Записаться на бесплатное обучение</button>
-                        </a>
+                        <div class="button-block">
+                            <a href="#form">
+                                <button class="button">Записаться на бесплатное обучение</button>
+                            </a>
+                        </div>
                     </div>
             </div>
         </div>
@@ -47,7 +54,11 @@
             <p>Примерно <span class="yel-selector">на 25% каждый месяц</span> благодаря кризису</p>
         </div>
         <div class="diagram">
-            <img src="image/diagram.png" alt="">
+            <picture>
+                <source srcset='image/graph600.png' type="image/jpg" media="(max-width: 600px)">
+                <img src="image/diagram.png">
+            </picture>
+            
             <p>Продавать онлайн сейчас выгодно как никогда</p>
         </div>
     </section>
@@ -144,7 +155,7 @@
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
-                                                        <button value="<?php echo $value['name']; ?>" class="button button-value">Записаться на бесплатное обучение</button>
+                                                        <button value="<?php echo $value['name']; ?>" class="button button-value">Выбрать наставника</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -190,7 +201,7 @@
                                                         <button class="button present">Смотреть презентацию</button>
                                                     </a>
                                                     <a href="#form">
-                                                        <button value="<?php echo $value['name']; ?>" class="button button-value">Записаться на бесплатное обучение</button>
+                                                        <button value="<?php echo $value['name']; ?>" class="button button-value">Выбрать наставника</button>
                                                     </a>
                                                 </div>
                                             </div>
@@ -206,6 +217,50 @@
                 </div>
             </div>
         </div>
+        <ul class="mentor-item">
+        <?php foreach ($option as $value) {?>
+                    <li>
+                        <div class="el tee">
+                            <div class="el__overflow">
+                                <div class="el__inner">
+                                    <div class="el__preview-cont">
+                                        <div class="teacher" style="background-image: url(image/teacher/<?php echo $value['image']; ?>.png);">
+                                            <div class="teacher-name"><?php echo $value['name']; ?></div>
+                                            <div class="years">С нами: <?php echo $value['time']; ?></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="el__content">
+                                        <div class="modal-content">
+                                            <span class="close" style="display: none;">&times;</span>
+                                            <div class="left-photo" style="background-image: url(image/teacher/<?php echo $value['image']; ?>.png);"></div>
+
+                                            <div class="content-teacher">
+                                                <div class="content-teacher-head">
+                                                  <h2><?php echo $value['name']; ?></h2>
+                                                  С нами: <?php echo $value['time']; ?></p>
+                                                </div>
+                                                <div class="content-teacher-text">
+                                                      <p><?php echo $value['description']; ?></p>
+                                                </div>
+                                                <div class="content-teacher-btn">
+                                                    <a href="<?php echo $value['link']; ?>" target="_blank">
+                                                        <button class="button present">Смотреть презентацию</button>
+                                                    </a>
+                                                    <a href="#form">
+                                                        <button value="<?php echo $value['name']; ?>" class="button button-value">Выбрать наставника</button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      <div class="el__close-btn"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                    <?php } ?>
+                    </ul>
     </div>
     <div class="slider-dots">
        <span class="slider-dots_item" onclick="currentSlide(1)"></span>
@@ -222,9 +277,11 @@
         <div class="info-text">
             <p>Школа <span class="yel-selector">«DROPSHIPPING. OUTMAX»</span> даст вам полное понимание функционала и возможностей продаж товара по всей России и СНГ.  Вы научитесь с нуля создавать привлекательные рекламные объявления, настраивать рекламу и приводить поток клиентов на ваши торговые площадки.</p>
         </div>
-        <div class="button">
-            <a href="#form">Записаться на бесплатное обучение</a>
-        </div>
+         <a href="#form">
+            <div class="button">
+               Записаться на бесплатное обучение
+            </div>
+        </a>
     </section>
 </div>
 
@@ -277,9 +334,9 @@
 <footer>
     <div class="container footer">
         <div class="wrap">
-            <span class="phone"><h2>+7 (391) 98-98-395</h2></span>
+            <span class="phone"><a href="tel:+73919898395 "><h2>+7 (391) 98-98-395</h2></a></span>
             <img src="image/logo-footer.png" alt="">
-            <h2>maxoutmax@mail.ru</h2>
+            <a href="mailto:maxoutmax@mail.ru"><h2>maxoutmax@mail.ru</h2></a>
         </div>
     </div>
 </footer>
@@ -295,5 +352,20 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script src="js/script.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(72831463, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72831463" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 </html>
