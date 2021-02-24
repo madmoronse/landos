@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 body: formData
             });
+
             if (response.ok) { 
                 let result = await response.json();
                 popupOpen(popup);

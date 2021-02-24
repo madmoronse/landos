@@ -374,6 +374,12 @@ section .text-content h2 {
 .lesson-item-text ul{
     padding-left: 15px;
 }
+.lesson-item-p {
+  background-color: #FFC328;
+  padding: 10px;
+  border-radius: 10px;
+  color:#000;
+}
 
 /* КОНТЕЙНЕР С ФОРМОЙ */
 .forms {
