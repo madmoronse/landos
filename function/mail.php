@@ -34,10 +34,12 @@ $headers .= "Reply-To: drop@outmax-school.ru\r\n";
 
 $send = mail($to, $subject, $message, $headers);
 
-$file = '../file/request.csv';
-$tofile = "'$name';'$email';'$phone';'$mentor';'$today'\n";
-$bom = "\xEF\xBB\xBF";
-@file_put_contents($file, $bom . $tofile . file_get_contents($file));
+if ($name != 'ТЕСТ') {
+    $file = '../file/request.csv';
+    $tofile = "'$name';'$email';'$phone';'$mentor';'$today'\n";
+    $bom = "\xEF\xBB\xBF";
+    @file_put_contents($file, $bom . $tofile . file_get_contents($file));
+}
 
 
 if($send == true) {
