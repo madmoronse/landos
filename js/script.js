@@ -159,6 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
+    
+
     function popupClose(popup) {
         popup.classList.remove('open');
     }

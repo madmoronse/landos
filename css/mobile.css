@@ -188,6 +188,9 @@
       .br {
           display: none;
       }
+      .popup_text {
+          font-size: 22px;
+      }
 }
 @media (prefers-reduced-motion: reduce) {
     html {

@@ -346,6 +346,7 @@
                 <div class="popup_text">
                     Заявка отправлена
                 </div>
+                <div class="popup_close close-popup">Закрыть</div>
             </div>
         </div>
     </div>
