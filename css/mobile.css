@@ -166,14 +166,14 @@
     }
 
     .el.s--active .el__close-btn:before {
-        transition: all 0.3s 0.1s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+        transition: all 0.3s 0.05s cubic-bezier(0.72, 0.09, 0.32, 1.57);
         transform: rotate(45deg) translateX(0);
     }
     .el__close-btn:after {
         transform: rotate(-45deg) translateX(100%);
     }
     .el.s--active .el__close-btn:after {
-        transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+        transition: all 0.3s 1.3s cubic-bezier(0.72, 0.09, 0.32, 1.57);
         transform: rotate(-45deg) translateX(0);
     }
     .el.s--active .el__content {
