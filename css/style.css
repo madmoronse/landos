@@ -380,6 +380,13 @@ section .text-content h2 {
   border-radius: 10px;
   color:#000;
 }
+.warning {
+  font-size: 12px;
+  color: red;
+  width: 100%;
+  max-width: 410px;
+  text-align: left;
+}
 
 /* КОНТЕЙНЕР С ФОРМОЙ */
 .forms {

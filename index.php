@@ -322,7 +322,8 @@
                     <?php foreach ($option as $value) {?>
                         <option value="<?php echo $value['name'];?>"><?php echo $value['name'];?></option>
                     <?php } ?>
-                </select>
+                </select><br>
+                <span class="warning">Внимание! Записаться можно только к одному наставнику</span>
                 <button type="submit" class="button">Отправить заявку</button>
             </form>
         </div>
