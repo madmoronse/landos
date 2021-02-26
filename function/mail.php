@@ -11,6 +11,17 @@ $today = date("F j, Y, g:i a");
 
 
 
+ $page = $phpexcel->setActiveSheetIndex(0); //Устанавливаем активный лист
+ $page->setCellValue("A1", "First name"); //Записываем значения в указанные ячейки:
+ $page->setCellValue("B1", "Last name");
+ $page->setCellValue("D1", "Telephone"); 
+ $page->setCellValue("A2", "Ivan"); 
+ $page->setCellValue("B2", "Ivanov");
+ $page->setCellValue("D2", "44-55-66"); 
+ $page->setTitle("table"); //Записываем название 
+ $objWriter = PHPExcel_IOFactory::createWriter($phpexcel, 'Excel2007'); //Формат
+ $objWriter->save("table.xlsx");
+
 if(trim(!empty($name))) {
     $message = 'Имя: ' . htmlspecialchars($name) . "\r\n";
 }
