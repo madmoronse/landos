@@ -27,3 +27,8 @@ function getMentors() {
 
 	return $result;
 }
+
+function addResponse($name, $phone, $email, $mentor) {
+	global $db;
+	$sql = "INSERT INTO response SET ";
+}
